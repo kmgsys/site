@@ -24,7 +24,7 @@ header{
     font-size:14px;
     font-weight: bold;
     color:#FFFFFF;
-    height: 20px;
+    height: 15px;
 }
 
 .menu ul {
@@ -34,7 +34,7 @@ header{
 .menu > ul > li {
     position: relative;
     float: left;
-    width: 140px;
+    width: 150px;
 }
 
 .menu li a {
