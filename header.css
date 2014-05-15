@@ -4,7 +4,7 @@
 }
 
 header{
-    height: 140px;
+    height: 100px;
     background-color: #e6e6e6;
 }
 
@@ -16,24 +16,32 @@ header{
 }
 
 .menu{
-    float: left;
     width: 100%;
     padding-top:0.5em;
-    padding-bottom:0.5em;
+    padding-bottom: 1.5em;
     background: #999999;
     font-family:Arial;
     font-size:14px;
     font-weight: bold;
     color:#FFFFFF;
+    height: 20px;
 }
 
-.menu > ul > li { /*hijos directos de ul de menu*/
-    display:inline;
+.menu ul {
+  list-style-type: none;
 }
 
-.menu a{
+.menu > ul > li {
+    position: relative;
+    float: left;
+    width: 140px;
+}
+
+.menu li a {
+    text-align: center;
+    display: block;
     text-decoration: none;
-    padding: 4px 18px;
+    padding: 8px 10px;
     color:#FFFFFF;
 }
 
@@ -50,5 +58,9 @@ header{
     position:absolute;
     display:block;
     background-color: #999999;
-    
+    width: 100%;
+}
+
+.menu li:hover > ul a {
+    text-align: left;
 }
