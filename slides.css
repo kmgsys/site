@@ -1,21 +1,28 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 ::selection {
-  background-color: black; }
+    background-color: black; }
 
-html, body {
-  width: 90%;
-  height: 100%; }
+.slides{
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 250px;
+    -webkit-margin-end: -100px;
 
-.a {
-  position: relative;
-  float: right;
-  height: 100%;
-  width: 16.66667%;
-  cursor: crosshair;
-  transition: width 0.15s ease-in-out; }
-  .a p {
+    -moz-margin-start: 250px;
+    -moz-margin-end: 0px;
+}
+
+.slides .a {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 16.66667%;
+    cursor: crosshair;
+    transition: width 0.15s ease-in-out; 
+}
+.slides .a p {
     position: absolute;
-    display: none;
+    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-60%, -50%);
@@ -25,33 +32,37 @@ html, body {
     font-family: Montserrat;
     font-weight: 400;
     font-size: 30px;
-    text-transform: uppercase; }
+    text-transform: uppercase; 
+}
 
-.a:nth-child(1) {
+.slides .a:nth-child(1) {
   background: #bed9d2; 
   height: 400px;
 }
 
-.a:nth-child(2) {
+.slides .a:nth-child(2) {
   background: #3f8488;  
-  height: 400px; }
+  height: 400px; 
+}
 
-.a:nth-child(3) {
+.slides .a:nth-child(3) {
   background: #e45f69; 
-  height: 400px;}
+  height: 400px;
+}
 
-.a:nth-child(4) {
+.slides .a:nth-child(4) {
   background: #fa87a2; 
-  height: 400px;}
+  height: 400px;
+}
 
-.hover {
+.slides .hover {
   width: 30%; }
 
-.unhover {
+.slides .unhover {
   width: 14%; }
 
-.click {
+.slides .click {
   width: 50%; }
 
-.unclick {
+.slides .unclick {
   width: 0%; }
