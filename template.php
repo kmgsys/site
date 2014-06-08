@@ -1,11 +1,12 @@
 <?php
+function checkInclude($file) {
+    if (file_exists($file))
+        include $file;
+}
+
+// Estilo de index.php
 include 'header.html';
-#foreach ([1,2,3,4,5,6] as $n) {
-#  echo "<h1>Numero {$n}</h1><br>\n";
-#}
 include 'Slides.html';
-?>
-<h1>KMG SYSTEM</h1>
-<?php
+checkInclude('suscripcion.html');
+checkInclude('informacion.html');
 include 'footer.html';
-?>
