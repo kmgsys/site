@@ -1,37 +1,39 @@
-@background-suscription: #F55;
-@color-text-suscription: #FFF;
-@height-suscription: 30%;
-@padding-suscription: 60px;
-@font-size-suscription: 30px;
+@background-suscription: #EEE;//#F55;
+@color-text-suscription: #E45051;
+@height-suscription: 300px;
+@padding-suscription: 30px;
+@font-size-suscription: 24px;
 @height-form: 35px;
 
 #suscription {
     background-color: @background-suscription;
-    height: @height-suscription;
-    padding: @padding-suscription;
+    text-align: center;
+    padding: 40px 10px;
 }
 
 #suscription > p {
     color: @color-text-suscription;
     font-size: @font-size-suscription;
+    max-width: 600px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.05em;
 }
 
 form {
-    width: 550px;
     margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
 }
 
 input[type=email]{
-    margin-right: 10px;
     background-color: white;
     border: solid 1px #bfbdbd;
     border-radius: .2em;
     color: #000;
     height: @height-form;
-    width: 400px;
+    width: 280px;
     box-shadow: 2px 2px 0 #828181 inset;
     font-size: 26px;
     text-align: center;
@@ -40,9 +42,10 @@ input[type=email]{
 input[type=button]{
     width: 130px;
     height: @height-form;
-    border: medium none;
+    border: none;
     cursor: pointer;
     color: white;
     background-color: #5c5;
     font-size: 20px;
+    margin: 25px 10px;
 }
