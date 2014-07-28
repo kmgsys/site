@@ -6,8 +6,10 @@ function checkInclude($file) {
 
 // Estilo de index.php
 include 'header.html';
-include 'Slides.html';
+// include 'Slides.html';
+checkInclude('productos.html');
 checkInclude('suscripcion.html');
+
 checkInclude('informacion.html');
 include 'footer.html';
 echo <<<END
