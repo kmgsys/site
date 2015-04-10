@@ -1,0 +1,50 @@
+{% extends 'baseModal.html' %}
+{% include 'uiMacros.html' %}
+
+{%- macro importFormatsString(formats) -%}
+  {%- for format in formats -%}{% if loop.index == loop.length %}{{ __(' or ') }}{% endif %}{{ __(format.label) }}{% if loop.index != loop.length and loop.length > 2 %}{{ __(', ') }}{% endif %}{% endfor %}
+{%- endmacro -%}
+
+{% block modalClass %}
+  {{ importClass }}
+{% endblock%}
+
+{% block modalLabel %}
+  Import {{ label }}
+{% endblock%}
+
+{% block modalControls %}
+  {{ renderProgressBtn({dataAttrs: 'data-save', float: 'right', color: 'base', label: __('Done')}) }}
+  {{ renderProgressBtn({dataAttrs: 'data-cancel', float: 'left', arrow: 'left', label: __('Cancel')}) }}
+{% endblock %}
+
+{% block modalInstructions %}
+  <p>
+  {{ __('This form accepts a ') }}{{ importFormatsString(supportedImport) }}{{ __(' file which may have the following headings: ') }}
+  {%- for field in fields -%}
+    {%- if (field.type != 'singleton') and (field.type != 'group') and (not aposContains(field.type, 'Reverse')) -%}
+      {% if notFirst %}, {% endif %}
+      {% set notFirst = true %}
+      <code>{{ field.name }}</code>
+    {%- endif -%}
+  {%- endfor -%}.
+  {{ __('Tags in the tags field should be comma-separated. Any unrelated headings are politely ignored. <strong>Please note that duplicates are not detected.</strong> If you import duplicates you may need to remove them manually.') }}
+  </p>
+{% endblock %}
+
+{% block modalBody %}
+  <form>
+    <fieldset class="apos-fieldset apos-fieldset-singleton apos-fieldset-file-input">
+      <label>{{ importFormatsString(supportedImport) }}{{ __(' File') }}</label>
+	  <input type="checkbox" name="removeAll" /> {{ __('Move existing %s to trash', label) }} <br/><br>
+	  {# Blueimp makes this go #}
+      <input type="file" name="file" />
+    </fieldset>
+    <table data-scoreboard class="apos-import-scoreboard">
+      <tr><th>{{ __('Rows Imported') }}</th><td data-rows>0</td></tr>
+      <tr><th>{{ __('Errors') }}</th><td data-errors>0</td></tr>
+      <tr><th>{{ __('Status') }}</th><td data-status>{{ __('not started') }}</td></tr>
+    </table>
+    <ul data-error-log class="apos-import-error-log"></ul>
+  </form>
+{% endblock %}

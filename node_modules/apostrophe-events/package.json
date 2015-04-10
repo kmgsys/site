@@ -1,0 +1,106 @@
+{
+  "name": "apostrophe-events",
+  "version": "0.5.18",
+  "description": "Calendar of events for the Apostrophe content management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:punkave/apostrophe-events.git"
+  },
+  "keywords": [
+    "calendar",
+    "events",
+    "event",
+    "apostrophe",
+    "cms",
+    "punkave"
+  ],
+  "author": {
+    "name": "P'unk Avenue LLC"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "0.8.x",
+    "lodash": "2.4.x",
+    "extend": "~1.1.3",
+    "apostrophe-snippets": "0.5.x",
+    "moment": "~2.0.0",
+    "geocoder": "*",
+    "qs": "~0.6.5",
+    "random-words": "0.0.1",
+    "randy": "~1.4.2"
+  },
+  "gitHead": "ac6ae0e0a382953f47a4b7b85c8516c987ba0e2e",
+  "bugs": {
+    "url": "https://github.com/punkave/apostrophe-events/issues"
+  },
+  "homepage": "https://github.com/punkave/apostrophe-events",
+  "_id": "apostrophe-events@0.5.18",
+  "_shasum": "1b189fd746481c1bc1c3fe42a97c5e1eaa934646",
+  "_from": "apostrophe-events@>=0.5.18 <0.6.0",
+  "_npmVersion": "1.4.24",
+  "_npmUser": {
+    "name": "jsumnersmith",
+    "email": "joel@punkave.com"
+  },
+  "maintainers": [
+    {
+      "name": "boutell",
+      "email": "boutell@boutell.com"
+    },
+    {
+      "name": "colpanik",
+      "email": "kerry@punkave.com"
+    },
+    {
+      "name": "kylestetz",
+      "email": "kyle@punkave.com"
+    },
+    {
+      "name": "jsumnersmith",
+      "email": "joel@punkave.com"
+    },
+    {
+      "name": "alexgilbert",
+      "email": "alex@punkave.com"
+    },
+    {
+      "name": "stuartromanek",
+      "email": "stuart@punkave.com"
+    },
+    {
+      "name": "benirose",
+      "email": "ben@punkave.com"
+    },
+    {
+      "name": "livhaas",
+      "email": "olivia@punkave.com"
+    },
+    {
+      "name": "mcoppola",
+      "email": "coppola@punkave.com"
+    },
+    {
+      "name": "gsf",
+      "email": "g@grrawr.com"
+    },
+    {
+      "name": "jimmyh",
+      "email": "jimmy@punkave.com"
+    },
+    {
+      "name": "suhmantha1",
+      "email": "sam@punkave.com"
+    }
+  ],
+  "dist": {
+    "shasum": "1b189fd746481c1bc1c3fe42a97c5e1eaa934646",
+    "tarball": "http://registry.npmjs.org/apostrophe-events/-/apostrophe-events-0.5.18.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/apostrophe-events/-/apostrophe-events-0.5.18.tgz",
+  "readme": "ERROR: No README data found!"
+}
